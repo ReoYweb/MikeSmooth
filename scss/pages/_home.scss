@@ -1,0 +1,140 @@
+.latest {
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  z-index: 3;
+  @include sp {
+    display: block;
+    width: 96%;
+    padding: 0 2%;
+  }
+  &__left {
+    width: 50%;
+    padding: 0 4% 0 0;
+    flex-wrap: wrap;
+    @include sp {
+      width: 100%;
+      padding: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: 34%;
+    padding: 0 0 0 4%;
+    @include sp {
+      width: 100%;
+    }
+    h3 {
+      font-size: 3.8rem;
+      text-transform: uppercase;
+      margin: 0 0 2rem;
+      font-weight: 400;
+      @include sp {
+        font-size: 2rem;
+        margin: 0;
+      }
+      i {
+        margin: 0 2rem 0 0;
+        font-size: 3.2rem;
+        @include sp {
+          font-size: 2rem;
+        }
+      }
+      span {
+        display: block;
+        font-size: 1.7rem;
+        @include sp {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+#ytplayer {
+  z-index: -1;
+  position: relative;
+  @include sp {
+    display: none;
+  }
+}
+
+#mute {
+  position: absolute;
+  top: -8rem;
+  left: -12rem;
+  z-index: 100000;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  @include sp {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  img {
+    width: 50%;
+  }
+}
+
+.ttl {
+  font-size: 16rem;
+  margin: -50rem 0 10rem 45rem;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  color: $color-green;
+
+  @include sp {
+    font-size: 6rem;
+    margin: -19rem 0 2rem 0;
+
+    font-weight: 400;
+  }
+}
+
+.media {
+  margin: 0rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 12rem;
+  @include sp {
+    grid-template-columns: 3fr 3fr;
+  }
+  img {
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    &:nth-child(1) {
+      width: 70%;
+    }
+    &:nth-child(2) {
+      width: 35%;
+    }
+    &:nth-child(3) {
+      width: 85%;
+    }
+  }
+  &__text {
+    padding: 0 6%;
+    p {
+      font-size: 1.3rem;
+      @include sp {
+        line-height: 1.7rem;
+        margin: 0 0 1rem 0;
+      }
+    }
+    .day {
+      font-size: 2.4rem;
+      display: block;
+      @include sp {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

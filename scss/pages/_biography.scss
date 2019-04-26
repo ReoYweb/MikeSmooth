@@ -1,0 +1,23 @@
+.biography {
+  width: 90%;
+  margin: 0 auto;
+  background-image: url(../images/test.jpg);
+  background-repeat: no-repeat;
+  background-position: left 20% top 2.5%;
+  @include sp {
+    background-position: 50% 50%;
+  }
+  p {
+    font-size: 1.5rem;
+    width: 450px;
+    margin-left: 53%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    line-height: 3.2rem;
+    @include sp {
+      width: 100%;
+      margin-left: 0;
+      line-height: 2.2rem;
+    }
+  }
+}

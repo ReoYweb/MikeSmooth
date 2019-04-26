@@ -1,0 +1,11 @@
+.btnbox {
+  text-align: center;
+}
+
+.btn1 {
+  @include btn1;
+}
+
+.btn2 {
+  @include btn1($color-yellow);
+}

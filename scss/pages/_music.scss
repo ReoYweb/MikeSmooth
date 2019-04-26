@@ -1,0 +1,80 @@
+.music {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  &__inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    @include sp {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__artwork {
+    width: 100%;
+    padding: 10% 10% 10% 0;
+    position: relative;
+    @include sp {
+      padding: 0;
+    }
+  }
+  &__text {
+    width: 80%;
+    @include sp {
+      width: 100%;
+    }
+    h4 {
+      font-size: 5rem;
+      margin-top: 2.5rem;
+      text-transform: capitalize;
+      @include sp {
+        font-size: 2rem;
+      }
+    }
+    p {
+      font-size: 1.7rem;
+      @include sp {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+#yBplayer {
+  position: relative;
+  z-index: 5;
+  width: 90%;
+  margin: 0 5%;
+  @include sp {
+    height: 200px;
+    width: 96%;
+  }
+}
+
+.otherMusic {
+  width: 90%;
+  margin: 0 auto;
+  &__art {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5%;
+    width: 90%;
+    margin: 0 5%;
+    @include sp {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2%;
+    }
+    &__box {
+      text-align: center;
+      text-transform: capitalize;
+      img {
+        width: 100%;
+        margin-bottom: 1.2rem;
+      }
+      h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+}

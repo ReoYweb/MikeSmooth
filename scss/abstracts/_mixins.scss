@@ -1,0 +1,84 @@
+@mixin minpc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin header-border-rb {
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+  border-right: 1px solid rgba(238, 238, 238, 0.3);
+}
+
+@mixin header-border-b {
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+}
+
+@mixin header-border-r {
+  border-right: 1px solid rgba(238, 238, 238, 0.3);
+}
+
+@mixin cardtype1 {
+  width: 100%;
+  background-color: $color-black;
+  color: $color-white;
+  position: relative;
+  z-index: 15;
+  top: 0;
+}
+
+@mixin btn1($bgcolor: $color-pink) {
+  padding: 2rem 0;
+  margin: 0 auto;
+  display: inline-block;
+  color: $color-white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  // border-bottom: 20px solid $color-white;
+  z-index: 100;
+  position: relative;
+  letter-spacing: 0.3rem;
+  transition: 0.7s;
+  box-sizing: border-box;
+  @include sp {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+  }
+  &:after {
+    background-color: $color-white;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    transition: 0.4s;
+    z-index: -1;
+    bottom: -60%;
+    left: 0;
+    @include sp {
+      height: 20px;
+      width: 20px;
+      bottom: -20%;
+    }
+  }
+  &:hover:after {
+    width: 100%;
+    background-color: $bgcolor;
+  }
+}

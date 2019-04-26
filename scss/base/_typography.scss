@@ -1,0 +1,96 @@
+.text {
+  position: absolute;
+  left: 5%;
+  top: 65%;
+  margin-top: -20px;
+  font-family: "Caveat", cursive;
+  transform: rotate(-10deg);
+
+  &.videotitle {
+    color: $color-yellow;
+    font-size: 10rem;
+    z-index: 15;
+    font-family: "Caveat", cursive;
+    top: 600px;
+    left: 42%;
+    transform: rotate(-10deg);
+    @include sp {
+      font-size: 10rem;
+      display: none;
+    }
+  }
+}
+
+.header__message {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  font-size: 7rem;
+  text-shadow: 5px, 5px, 5px #000;
+  @include sp {
+    font-size: 2.2rem;
+  }
+}
+
+.word {
+  position: absolute;
+  width: 1200px;
+  opacity: 0;
+  top: -30%;
+  text-shadow: 5px, 5px, 5px #000;
+  font-size: 30rem;
+  @include sp {
+    width: 100%;
+    font-size: 6.5rem;
+    top: 20%;
+  }
+  &.type2 {
+    font-size: 16rem;
+    width: 660px;
+    @include sp {
+      width: 100%;
+      font-size: 2rem;
+    }
+  }
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.42s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c02b7dc7;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #e0dd0a;
+}
